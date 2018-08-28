@@ -24,6 +24,10 @@ export default {};
         @extend .container;
         display: flex;
         justify-content: space-between;
+
+        @include desktop {
+            padding: 0 15px;
+        }
     }
 
     &__logo {

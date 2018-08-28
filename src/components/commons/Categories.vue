@@ -28,11 +28,17 @@ export default {
 
 <style lang="scss" scoped>
 .categories {
+    @extend .container;
     padding: 0 1rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 15px;
     max-width: 100%;
+
+    @include desktop {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        max-width: $desktop;
+    }
 
     &__category {
         @extend .btn;
@@ -43,6 +49,10 @@ export default {
         padding: 0;
         background-size: cover;
         background-position: center;
+
+        @include desktop {
+            height: 160px;
+        }
     }
 
     &__link {
@@ -55,6 +65,17 @@ export default {
         display: block;
         padding-top: 70px;
         font-size: 1.2rem;
+
+        &:hover {
+            color: $color-white;
+            background: hsla(0, 0%, 7%, 0.6);
+            transition: all 0.2s ease-in;
+        }
+
+        @include desktop {
+            height: 160px;
+            padding-top: 60px;
+        }
     }
 }
 </style>

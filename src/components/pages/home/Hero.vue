@@ -14,6 +14,11 @@ export default {};
     padding: 1rem 1rem 2rem;
     text-align: left;
 
+    @include desktop {
+        padding: 4rem 2rem 4rem;
+        text-align: center;
+    }
+
     &__title {
         font-size: 1.8rem;
         font-weight: 700;
@@ -21,6 +26,12 @@ export default {};
 
     &__body {
         opacity: 0.7;
+
+        @include desktop {
+            max-width: 500px;
+            display: block;
+            margin: auto;
+        }
     }
 }
 </style>
