@@ -1,6 +1,7 @@
 <template>
     <section class="hero">
-        <h1 class="hero__title">A minimal shopping experience tailored to your interests.</h1>
+        <h1 class="hero__title">Minimal choice, Minimal effort.</h1>
+        <p class="hero__body">Instead of researching 100's of products doing the same thing, we pick the winners and show you the ones worth looking at.</p>
     </section>
 </template>
 
@@ -10,11 +11,16 @@ export default {};
 
 <style lang="scss" scoped>
 .hero {
-    padding: 4rem;
+    padding: 1rem 1rem 2rem;
+    text-align: left;
 
     &__title {
-        font-size: 2.2rem;
-        text-align: center;
+        font-size: 1.8rem;
+        font-weight: 700;
+    }
+
+    &__body {
+        opacity: 0.7;
     }
 }
 </style>

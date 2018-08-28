@@ -18,7 +18,7 @@ export default {};
 <style lang="scss" scoped>
 .navbar {
     height: 80px;
-    padding: 10px;
+    padding: 15px;
 
     &__container {
         @extend .container;
@@ -33,7 +33,7 @@ export default {};
         font-weight: 900;
         font-size: 1.4rem;
         padding: 10px;
-        line-height: 1;
+        line-height: 15px;
         letter-spacing: -2px;
         width: 75px;
 
@@ -45,7 +45,7 @@ export default {};
 
     &__menu {
         opacity: 0.8;
-        width: 35px;
+        width: 25px;
         margin: 15px;
     }
 }

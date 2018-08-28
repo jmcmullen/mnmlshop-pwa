@@ -25,6 +25,7 @@ module.exports = {
         path.resolve(__dirname, '../src/assets/scss/mixins/helpers.scss'),
         path.resolve(__dirname, '../src/assets/scss/mixins/media-queries.scss'),
         path.resolve(__dirname, '../src/assets/scss/global/forms.scss'),
+        path.resolve(__dirname, '../src/assets/scss/global/links-buttons.scss'),
         path.resolve(__dirname, '../src/assets/scss/global/index.scss'),
         path.resolve(__dirname, '../src/assets/scss/mixins/index.scss'),
     ],
