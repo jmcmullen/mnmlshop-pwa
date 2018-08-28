@@ -40,10 +40,15 @@ img[lazy='loaded'] {
 
 .page-enter-active,
 .page-leave-active {
-    transition: opacity 0.3s;
+    transition: all 0.3s ease-out;
+}
+.page-enter,
+.page-leave-active {
+    opacity: 0;
+    transform-origin: 50% 50%;
 }
 
-.page-enter,
-.page-leave-to {
-    opacity: 0;
+.container {
+    width: 100%;
+    max-width: $desktop;
 }

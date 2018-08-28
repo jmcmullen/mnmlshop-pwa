@@ -4,9 +4,9 @@ export async function FETCH_PRODUCTS({ commit }) {
     CATEGORIES.forEach(async category => {
         try {
             const { data } = await this.app.$axios.get(
-                `${process.env.API_URL}/${category}.json`
+                `${process.env.API_URL}/${category.name}.json`
             );
-            commit('SET_PRODUCTS', { category, data });
+            commit('SET_PRODUCTS', { category: category.name, data });
         } catch (err) {
             // eslint-disable-next-line no-console
             console.log(err.message);

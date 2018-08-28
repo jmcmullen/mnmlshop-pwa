@@ -1,0 +1,55 @@
+a {
+    color: $color-primary;
+    transition: color 0.3s ease-in;
+
+    &:hover {
+        color: darken($color-primary, 10%);
+    }
+}
+
+.btn,
+button,
+input[type='submit'],
+input[type='reset'],
+input[type='button'] {
+    display: inline-block;
+    padding: 0 30px;
+    color: #555;
+    text-align: center;
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 38px;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    white-space: nowrap;
+    background-color: transparent;
+    border-radius: 4px;
+    border: 1px solid #bbb;
+    cursor: pointer;
+    box-sizing: border-box;
+    transition: all 0.3s ease-in;
+
+    &:hover {
+        color: #333;
+        border-color: #888;
+        outline: 0;
+    }
+}
+
+.btn.btn--primary,
+button.btn--primary,
+input[type='submit'].btn--primary,
+input[type='reset'].btn--primary,
+input[type='button'].btn--primary {
+    color: #fff;
+    background-color: #33c3f0;
+    border-color: #33c3f0;
+
+    &:hover,
+    &:focus {
+        color: #fff;
+        background-color: #1eaedb;
+        border-color: #1eaedb;
+    }
+}

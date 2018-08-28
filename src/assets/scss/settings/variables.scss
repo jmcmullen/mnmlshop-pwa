@@ -1,5 +1,15 @@
-$color-primary: black;
-$color-secondary: gray;
+$color-blue: #66c7f4;
+$color-rich: #093a3e;
+$color-black: #001011;
+$color-white: #f2f4f3;
+$color-dirty: #f3efe0;
+$color-grey: #d7cdcc;
+$color-red: #d33f49;
+
+$color-primary: $color-blue;
+$color-secondary: $color-rich;
+
+$font-sans: 'Source Sans Pro', sans-serif;
 
 // Responsiveness
 // These numbers are divisible by both 12 and 16
