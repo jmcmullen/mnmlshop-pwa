@@ -17,12 +17,7 @@ const store = () =>
         state,
         getters,
         mutations,
-        actions: {
-            ...actions,
-            async nuxtServerInit({ dispatch }) {
-                await dispatch('FETCH_PRODUCTS');
-            },
-        },
+        actions,
     });
 
 export default store;

@@ -32,6 +32,7 @@ module.exports = {
 
     // Plugins
     plugins: [
+        { src: '~/plugins/init.js' },
         { src: '~/plugins/lazyload.js', ssr: false },
         { src: '~/plugins/webfonts.js', ssr: false },
     ],
