@@ -15,13 +15,13 @@
 </template>
 
 <script>
-import categories from '~/utils/fixtures/categories';
+import { listedCategories } from '~/utils/fixtures/categories';
 
 export default {
-    data() {
-        return {
-            categories,
-        };
+    computed: {
+        categories() {
+            return listedCategories();
+        },
     },
 };
 </script>
