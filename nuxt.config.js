@@ -3,7 +3,7 @@ const config = require('./internals/nuxt');
 
 module.exports = merge(config, {
     head: {
-        title: 'mnmlshop-pwa',
+        title: 'Minimal Shopping - Only the good stuff!',
         meta: [
             { charset: 'utf-8' },
             {
@@ -13,10 +13,11 @@ module.exports = merge(config, {
             {
                 hid: 'description',
                 name: 'description',
-                content: 'A minimal shopping experience tailored to your interests.',
+                content:
+                    "A curated list of the best in tech, audio, gaming, men's apparel, accessories and more.",
             },
         ],
     },
 
-    loading: { color: '#3B8070' },
+    loading: { color: '#001011' },
 });

@@ -1,8 +1,9 @@
 module.exports = {
     manifest: {
-        name: 'mnmlshop-pwa',
-        description: 'A minimal shopping experience tailored to your interests.',
+        name: 'Minimal Shopping',
+        description:
+            "A curated list of the best in tech, audio, gaming, men's apparel, accessories and more.",
         display: 'fullscreen',
-        background_color: '#3B8070',
+        background_color: '#001011',
     },
 };
