@@ -55,7 +55,7 @@ module.exports = {
 
     // System scope variables.
     env: {
-        API_URL: 'https://s3.us-east-2.amazonaws.com/mnmlshop-api',
+        API_URL: 'https://s3.amazonaws.com/api.minimal.shopping/wishlists',
     },
 
     // Generate dynamic routes from our content folder.
