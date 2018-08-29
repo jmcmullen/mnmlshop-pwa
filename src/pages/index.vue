@@ -10,6 +10,14 @@
             title="Apparel" 
             :products="apparelList"
             :category="apparelCategory"/>
+        <product-list 
+            title="Gaming" 
+            :products="gamingList"
+            :category="gamingCategory"/>
+        <product-list 
+            title="Accessories" 
+            :products="accessoriesList"
+            :category="accessoriesCategory"/>
     </div>
 </template>
 
@@ -33,6 +41,12 @@ export default {
             apparelList: state => state.products.apparel,
             apparelCategory: state =>
                 state.categories.find(c => c.name === 'apparel'),
+            gamingList: state => state.products.gaming,
+            gamingCategory: state =>
+                state.categories.find(c => c.name === 'gaming'),
+            accessoriesList: state => state.products.accessories,
+            accessoriesCategory: state =>
+                state.categories.find(c => c.name === 'accessories'),
         }),
     },
 };
