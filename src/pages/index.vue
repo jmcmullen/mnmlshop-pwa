@@ -18,6 +18,14 @@
             title="Accessories" 
             :products="accessoriesList"
             :category="accessoriesCategory"/>
+        <product-list 
+            title="Tech" 
+            :products="techList"
+            :category="techCategory"/>
+        <product-list 
+            title="Audio" 
+            :products="audioList"
+            :category="audioCategory"/>
     </div>
 </template>
 
@@ -47,6 +55,12 @@ export default {
             accessoriesList: state => state.products.accessories,
             accessoriesCategory: state =>
                 state.categories.find(c => c.name === 'accessories'),
+            techList: state => state.products.tech,
+            techCategory: state =>
+                state.categories.find(c => c.name === 'tech'),
+            audioList: state => state.products.audio,
+            audioCategory: state =>
+                state.categories.find(c => c.name === 'audio'),
         }),
     },
 };
