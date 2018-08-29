@@ -10,7 +10,7 @@
                     :key="i"/>
             </div>
             <nuxt-link class="list__cta" :to="category.url">
-                View more {{ category.name }} products
+                More {{ category.name }} products
             </nuxt-link>
         </div>
     </section>
