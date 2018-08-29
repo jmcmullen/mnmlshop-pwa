@@ -1,5 +1,5 @@
 <template>
-    <section class="product">
+    <section class="product" v-if="product">
         <img v-lazy="product.image" alt="" class="product__image">
         <div class="product__details">
             <h3 class="product__title">{{ product.title }}</h3>
@@ -9,7 +9,7 @@
                 :href="product.url" 
                 target="_blank" 
                 rel="nofollow">
-                Check it out
+                Buy on Amazon
             </a>
         </div>
     </section>

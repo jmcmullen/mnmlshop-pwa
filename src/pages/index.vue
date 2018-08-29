@@ -2,7 +2,14 @@
     <div class="page page--home">
         <hero/>
         <categories/>
-        <product-list title="Currently trending" :products="popularList"/>
+        <product-list 
+            title="Currently popular" 
+            :products="popularList"
+            :category="popularCategory"/>
+        <product-list 
+            title="Apparel" 
+            :products="apparelList"
+            :category="apparelCategory"/>
     </div>
 </template>
 
@@ -19,7 +26,14 @@ export default {
         ProductList,
     },
     computed: {
-        ...mapState({ popularList: state => state.products.popular }),
+        ...mapState({
+            popularList: state => state.products.popular,
+            popularCategory: state =>
+                state.categories.find(c => c.name === 'popular'),
+            apparelList: state => state.products.apparel,
+            apparelCategory: state =>
+                state.categories.find(c => c.name === 'apparel'),
+        }),
     },
 };
 </script>
