@@ -2,28 +2,28 @@
     <div class="page page--home">
         <hero/>
         <categories/>
-        <product-list 
-            title="Currently popular" 
+        <product-list
+            title="Currently popular"
             :products="popularList"
             :category="popularCategory"/>
-        <product-list 
-            title="Apparel" 
+        <product-list
+            title="Apparel"
             :products="apparelList"
             :category="apparelCategory"/>
-        <product-list 
-            title="Gaming" 
+        <product-list
+            title="Gaming"
             :products="gamingList"
             :category="gamingCategory"/>
-        <product-list 
-            title="Accessories" 
+        <product-list
+            title="Accessories"
             :products="accessoriesList"
             :category="accessoriesCategory"/>
-        <product-list 
-            title="Tech" 
+        <product-list
+            title="Tech"
             :products="techList"
             :category="techCategory"/>
-        <product-list 
-            title="Audio" 
+        <product-list
+            title="Audio"
             :products="audioList"
             :category="audioCategory"/>
     </div>
@@ -62,6 +62,11 @@ export default {
             audioCategory: state =>
                 state.categories.find(c => c.name === 'audio'),
         }),
+    },
+    async fetch({ store }) {
+        if ((process.static && process.server) || process.server) {
+            await store.dispatch('FETCH_PRODUCTS');
+        }
     },
 };
 </script>
