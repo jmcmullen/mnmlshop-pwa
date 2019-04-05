@@ -64,9 +64,7 @@ export default {
         }),
     },
     async fetch({ store }) {
-        if ((process.static && process.server) || process.server) {
-            await store.dispatch('FETCH_PRODUCTS');
-        }
+        await store.dispatch('FETCH_PRODUCTS');
     },
 };
 </script>

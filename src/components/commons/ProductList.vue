@@ -3,15 +3,18 @@
         <div class="list__container">
             <h2 class="list__title" v-if="title">{{ title }}</h2>
             <div class="list__products">
-                <product 
+                <product
                     v-for="(product, i) in products"
-                    v-if="i < limit" 
-                    :product="product" 
+                    v-if="i < limit"
+                    :product="product"
                     :key="i"/>
+                <div class="list__more">
+                    <h5 class="results">See the {{products.length}} more results..</h5>
+                    <nuxt-link class="list__cta" :to="category.url">
+                        More {{ category.name }} products
+                    </nuxt-link>
+                </div>
             </div>
-            <nuxt-link class="list__cta" :to="category.url">
-                More {{ category.name }} products
-            </nuxt-link>
         </div>
     </section>
 </template>
@@ -34,7 +37,7 @@ export default {
         },
         limit: {
             type: Number,
-            default: 4,
+            default: 5,
         },
         category: {
             type: Object,
@@ -65,8 +68,10 @@ export default {
     }
 
     &__title {
-        font-size: 1.5rem;
+        font-size: 1.8rem;
         margin-bottom: 1rem;
+        text-transform: uppercase;
+        font-weight: bold;
     }
 
     &__products {
@@ -82,6 +87,12 @@ export default {
         display: block;
         max-width: 250px;
         margin: 2rem auto;
+    }
+
+    &__more {
+        padding: 3rem;
+        text-align: center;
+        border-bottom: 1px solid $color-grey;
     }
 }
 </style>
